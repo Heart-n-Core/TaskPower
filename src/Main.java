@@ -2,10 +2,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-//        float testFloat = 2;
-//        int testPower = 0;
-//        System.out.println(processPower(testFloat, testPower));
-
         Scanner scanner = new Scanner(System.in);
         while (true){
             System.out.println("Enter an integer or a decimal number");
@@ -20,8 +16,8 @@ public class Main {
 
     private static float processPower(float input, int power) {
         if(power == 0){return 1;} //Zero power case
-        float out = input;
-
+		if(power == 1){return input;} //One power case
+		float out = input;
         if(power > 1){ //Positive power case
             for (int i = 0; i < power-1; i++) {
                 out *= input;
